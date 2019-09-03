@@ -30,6 +30,10 @@ public class TicketControllers {
 	public List<Tickets> getallTicketsByUser(@PathVariable int userid){
 		return ticketservice.getAllTickets(userid);
 	}
+	@GetMapping("/health")
+	public String healthcheck() {
+		return "ok";
+	}
 	
 	
 }
